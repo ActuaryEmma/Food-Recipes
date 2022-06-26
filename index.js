@@ -1,4 +1,5 @@
 
+//const searchButton = document.getElementById("search-bar"); 
 const searchForm = document.querySelector("#form"); 
 const getStarted = document.getElementById("btn");
 const titleRecipe = document.getElementById("recipe-name");
@@ -11,8 +12,6 @@ const recipeCloseBtn = document.getElementById("recipe-close-btn")
 const recipe = document.getElementById("meal-recipes")
 const mealList = document.getElementById("meal")
 
-
-
 const mealRecipe = document.querySelector(".meal-recipes")
 searchForm.addEventListener("submit", (event) => {
     const searchButton = document.querySelector(".search-bar").value; 
@@ -24,9 +23,21 @@ searchForm.addEventListener("submit", (event) => {
     .then (dataRecipes => {
         mealRecipe.innerHTML = ``
         displayMeal(dataRecipes)
+
     })
+    .catch(error =>{
+        alert("Meal or recipe does not exist.")
+
+    })
+    document.location.href="#meal-recipes"
+    console.log("data")
     
 })
+
+
+
+
+
 
 function displayMeal(dataRecipes){
     let mealArrays = dataRecipes.meals
@@ -59,6 +70,7 @@ function displayMeal(dataRecipes){
         let mealMeasure9 = mealObject.strMeasure9
         let mealMeasure10 = mealObject.strMeasure10
         //console.log(mealIngredient)
+        let likes = 0;
         let displaydiv = document.createElement("div")
         displaydiv.innerHTML = 
         `<div class="mealItem">
@@ -104,23 +116,37 @@ function displayMeal(dataRecipes){
         <li>${mealMeasure10}</li>
         </ol>
         </div>`
+
+        
+
+        mealRecipe.appendChild(displaydiv)
+
     })
 }
+// 
 
+function myFunc() {
+    var para = document.getElementById("p");
+    para.classList.toggle("paragraphClass");
+}
+
+// 
 
 const form1 = document.getElementById("form1")
 form1.addEventListener("click", (event)=>{
     const searchInput = document.getElementById("recipeSearch").value;
     event.preventDefault();
-    console.log(searchInput);}) 
-                
-const food =`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`;
-            
-fetch(food)
-.then((res) => res.json())
-.then (dataRecipes => {
-    console.log(dataRecipes)
-})
-            
+    console.log(searchInput);
     
-            
+    const food =`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`;
+
+    fetch(food)
+    .then((res) => res.json())
+    .then (dataRecipes => {
+        mealRecipe.innerHTML = ``
+        displayMeal(dataRecipes) 
+    })
+    .catch(error =>{
+        alert("Meal or recipe does not exist.") 
+     }) 
+}) 
