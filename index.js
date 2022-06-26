@@ -30,7 +30,7 @@ searchForm.addEventListener("submit", (event) => {
     })
     document.location.href="#meal-recipes"
     console.log("data")
-    
+    searchForm.reset();
 })
 
 
@@ -120,6 +120,8 @@ function displayMeal(dataRecipes){
         //console.log(headings)
         let recipeBtn= displaydiv.querySelector("#getRecipe")
 
+        let likeBtn = displaydiv.querySelector("#likeBtn")
+        //console.log(idcollection)
         let items = displaydiv.querySelectorAll(".ingredient-list")
 
 
@@ -150,6 +152,11 @@ function displayMeal(dataRecipes){
             }
         
         })
+        likeBtn.addEventListener("click", ()=>{
+            likes++
+            displaydiv.querySelector("#likes").textContent= `${likes} Likes`
+        })
+
         mealRecipe.appendChild(displaydiv)
 
     })
@@ -179,5 +186,6 @@ form1.addEventListener("click", (event)=>{
     })
     .catch(error =>{
         alert("Meal or recipe does not exist.") 
-     }) 
+     })
+     form1.reset(); 
 }) 
