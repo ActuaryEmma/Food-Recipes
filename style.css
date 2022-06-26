@@ -37,3 +37,79 @@ section {
 #navigationbar a:hover{
     color:blue;
 }
+
+/* home page start */
+.page {
+    width:100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+     grid-gap:1.5rem;
+    align-items: center;
+    
+    
+    /* font-size:30px; */
+  
+
+}
+
+ .homepage {
+    
+    text-align: center;
+    align-items:center;  
+    /* padding:10px 20px;    */
+    
+} 
+#homeh3{
+    font-size: 30px;
+    color:greenyellow
+}
+
+#homebtn{
+    display: inline-block;
+    padding: 10px 20px;
+    color:white;
+    font-size: 20px;
+    background:red;
+    border-radius: 30px;
+    width: 30%;
+    
+    max-width: 1200px;
+    padding: 10px
+}
+#paragraph{
+    font-size: 50px;
+    font-style:italic;
+    font-weight:bold;
+    color:white;
+    
+} 
+
+/* about page start */
+.about{
+    /* display:grid; 20*/
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-gap: 0.7rem;
+    align-items: center;
+    min-height: 50vh;
+    color:white;
+}
+#abouth2{
+    font-size: 30px;
+    color:greenyellow;
+    text-align: center
+}
+#aboutparagraph{
+    font-size: 25px;
+    line-height: 30px;
+    padding: 20px;
+    font-style: italic;
+    font-family: "open sans",;
+}
+#abouth3{
+    font-size: 30px;
+    text-decoration: underline;
+    font-style: bold;
+    text-align: center;
+   
+} 
