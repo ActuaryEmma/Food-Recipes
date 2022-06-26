@@ -120,6 +120,7 @@ function displayMeal(dataRecipes){
         //console.log(headings)
         let recipeBtn= displaydiv.querySelector("#getRecipe")
 
+        let items = displaydiv.querySelectorAll(".ingredient-list")
 
 
 
@@ -136,8 +137,19 @@ function displayMeal(dataRecipes){
                 }
                    
             }
-        })
+            for (let item of items){
+                if(item.style.display === "none"){
+                    item.style.display = "block";
+                //console.log(i) 
 
+                }else {
+                    item.style.display = "none"
+
+                }
+
+            }
+        
+        })
         mealRecipe.appendChild(displaydiv)
 
     })
