@@ -93,6 +93,7 @@ section {
     align-items: center;
     min-height: 50vh;
     color:white;
+   
 }
 #abouth2{
     font-size: 30px;
@@ -225,3 +226,36 @@ p{
 }
 /*  */
 
+.contacts{
+
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    margin-bottom: 0px;}
+.contactForm{
+   
+
+    display:grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin:30px;
+    
+
+}
+.feedbackinput{
+    background:silver;
+    border-radius: 40px;
+    width: 90%;
+    
+    max-width: 500px;
+    padding: 20px;
+    color:black;
+}
+#contactinfo{
+    background:silver;
+    border-radius: 40px;
+    width: 90%;
+    
+    max-width: 500px;
+    padding: 20px;
+    color:black;
+}
