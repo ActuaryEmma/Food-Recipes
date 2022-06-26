@@ -1,4 +1,3 @@
-
 //const searchButton = document.getElementById("search-bar"); 
 const searchForm = document.querySelector("#form"); 
 const getStarted = document.getElementById("btn");
@@ -117,7 +116,27 @@ function displayMeal(dataRecipes){
         </ol>
         </div>`
 
-        
+        let headings= displaydiv.querySelectorAll(".h3instruction")
+        //console.log(headings)
+        let recipeBtn= displaydiv.querySelector("#getRecipe")
+
+
+
+
+        recipeBtn.addEventListener("click", ()=>{
+            for (let i of headings){
+                if(i.style.display === "none"){
+                    i.style.display = "block";
+                    recipeBtn.textContent = "Hide Recipe"
+
+                }else {
+                    i.style.display = "none"
+                    recipeBtn.textContent = "Get Recipe"
+
+                }
+                   
+            }
+        })
 
         mealRecipe.appendChild(displaydiv)
 
