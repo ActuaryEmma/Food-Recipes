@@ -12,7 +12,7 @@ body{
     left:0;
     right:0;
     z-index: 1000;
-    background:grey;
+    background:silver;
     display:flex;
     align-items: center;
     justify-content:space-between;
@@ -28,7 +28,7 @@ body{
 }
 #navigationbar a{
     font-size: 20px;
-    color:red;
+    color:black;
     margin: 0 1rem;
 }
 
@@ -56,7 +56,7 @@ body{
     flex-flow: row wrap;
     align-content: stretch;
     min-height: 60vh;
-    margin-top: 200px;
+    margin-top: 180px;
 
 }
 
@@ -105,7 +105,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.7rem;
     align-items: center;
-    /* min-height: 50vh; */
+    min-height: 60vh;
     color:white;
 }
 #abouth2{
