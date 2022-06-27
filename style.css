@@ -1,20 +1,18 @@
 body{
-    background:black;
-    color:white
+    background-color: black;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 10px;
 }
 
-section {
-    padding:0px
-}
-
-/* navigation and logo  */
+/* header */
 .header{
     position:fixed;
     top:0;
     left:0;
     right:0;
     z-index: 1000;
-    background:silver;
+    background:grey;
     display:flex;
     align-items: center;
     justify-content:space-between;
@@ -38,28 +36,42 @@ section {
     color:blue;
 }
 
-/* home page start */
-.page {
-    width:100%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-     grid-gap:1.5rem;
-    align-items: center;
-    
-    
-    /* font-size:30px; */
-  
+#logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+
+/* home section */
+#main{
+    display: block;
+
+}
+.page{
+    display:flex;
+    flex-flow: row wrap;
+    align-content: stretch;
+    min-height: 60vh;
+    margin-top: 200px;
 
 }
 
- .homepage {
+.homepage{
     
+    flex: 50%;
     text-align: center;
-    align-items:center;  
-    /* padding:10px 20px;    */
     
-} 
+    
+}
+#homeimage{
+    flex:50%;
+    text-align: center;
+}
+
 #homeh3{
     font-size: 30px;
     color:greenyellow
@@ -85,70 +97,82 @@ section {
     
 } 
 
-/* about page start */
+
+/* about section */
+
 .about{
-    /* display:grid; 20*/
-    /* grid-template-columns: repeat(2, 1fr); */
+    display:flex; 
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.7rem;
     align-items: center;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     color:white;
-   
 }
 #abouth2{
-    font-size: 30px;
+    font-size: 25px;
     color:greenyellow;
     text-align: center
 }
 #aboutparagraph{
-    font-size: 25px;
+    font-size: 20px;
     line-height: 30px;
     padding: 20px;
     font-style: italic;
     font-family: "open sans",;
 }
 #abouth3{
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: underline;
     font-style: bold;
     text-align: center;
    
 } 
 
-/* recipe start */
 
-/* .mealItem{
-    display: flex;
-    float: left;
-    width: 400px;
-    font-size: 18px;
-    
-} */
+
+
+
+
+/* search result section */
+
+.recipedetails{
+    display: block;
+}
+#searchcolor{
+    background: silver;
+    text-align: center;
+}
+#meal-recipes{
+    display:flex;
+    overflow:hidden;
+    flex-wrap: wrap;
+  align-content: flex-start;
+  overflow: scroll;
+  margin-left:auto;
+  
+   
+}
+.mealItem{
+    display: inline;
+    float: right;
+    width: 300px;
+    background-color:white;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color:black;
+    margin:10px;
+    margin-left:auto;
+}
+.mealItem:hover{
+    border-color: white;
+}
 #meal-img{
     width: 100%;
     height: 250px;
     border-radius:5px;
 }
-.mealItem{
-    display: inline;
-    float: left;
-    width: 300px;
-    margin: 10px;
-    background-color:white;
-    border-radius: 5px;
-    /* width: 100%;  */
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    /* max-width: 500px; */
-    /* padding: 5px; */
-   color:black
-
-}
-.mealItem:hover{
-    border-color: white;
-}
-
 
 .btn{
     display: block;
@@ -188,10 +212,79 @@ p{
     padding-top: 30px;
 
 }
+.formdetails{
+    text-align: center;
+}
+
+/* contact section */
+
+*{
+    margin:0;
+    padding: 0;
+}
+.contact-section{
+    background: grey;
+    background-size: cover;
+
+    padding: 40px 0
+
+}
+.contact-section h2{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+}
+.border{
+    width:100px;
+    height:10px;
+    background:black;
+    margin:40px auto;
+}
+.contact-form{
+    max-width:600px;
+    margin:auto;
+    padding: 0 10px;
+    overflow:hidden;
+}
+.contact-form-text{
+    display:block;
+    width:100%;
+    box-sizing: border-box;
+    margin:16px 0;
+    border:0;
+    background: black;
+    padding: 20px 40px;
+    outline: none;
+    color:white;
+    transition: 0.5s;
+}
+.contact-form-text:focus{
+    box-shadow: 0 0 10px 4px greenyellow;
+}
+textarea.contact-form-text{
+    resize:none;
+    height:120px;
+    
+}
+.contact-form-btn{
+    float:right;
+    border: 0;
+    background: black;
+    color:greenyellow;
+    padding: 12px 50px;
+    border-radius:20px;
+    cursor:pointer;
+    transition: 0.5s;
+
+
+}
+.contact-form-btn:hover{
+    background: silver;
+}
 
 /* search input */
 #recipeSearch{
-    width: 400px;
+    width: 350px;
     height: 30px;
     margin: 10px;
     border: none;
@@ -202,60 +295,40 @@ p{
 /* heading  results*/
 #search-recipe{
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     color:black;
     margin-bottom: 0px;}
 
 
 #searchcolor{
-    background-color: silver;
-    /* margin-top: 10px; */
+    background-color: grey;
+    margin-top: 30px;
 
 }
 
 /* search button */
 #searchInput{
-    width: 200px;
+    width: 150px;
     height: 30px;
     margin: 10px;
     border: none;
     border-radius: 5px;
     font-size: 20px;
-    background-color: rgb(228, 69, 69);
-    color: white
+    background-color: black;
+    color: greenyellow
 }
-/*  */
 
-.contacts{
 
-    text-align: center;
-    font-size: 30px;
-    color:white;
-    margin-bottom: 0px;}
-.contactForm{
-   
 
-    display:grid;
-    grid-template-columns: repeat(2, 2fr);
-    margin:30px;
-    
 
-}
-.feedbackinput{
-    background:silver;
-    border-radius: 40px;
-    width: 90%;
-    
-    max-width: 500px;
-    padding: 20px;
-    color:black;
-}
-#contactinfo{
-    background:silver;
-    border-radius: 40px;
-    width: 90%;
-    
-    max-width: 500px;
-    padding: 20px;
-    color:black;
-}
+
+
+
+
+
+
+
+
+
+
+

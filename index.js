@@ -1,15 +1,9 @@
-//const searchButton = document.getElementById("search-bar"); 
+
 const searchForm = document.querySelector("#form"); 
 const getStarted = document.getElementById("btn");
-const titleRecipe = document.getElementById("recipe-name");
-const category = document.getElementById("recipe-category")
-const image = document.getElementById("recipe-image");
-const instructions = document.getElementById("recipe-instructions");
-const mealImage = document.getElementById("meal-img")
-const mealName = document.getElementById("meal-name")
-const recipeCloseBtn = document.getElementById("recipe-close-btn")
-const recipe = document.getElementById("meal-recipes")
-const mealList = document.getElementById("meal")
+
+
+
 
 const mealRecipe = document.querySelector(".meal-recipes")
 searchForm.addEventListener("submit", (event) => {
@@ -32,6 +26,11 @@ searchForm.addEventListener("submit", (event) => {
     console.log("data")
     searchForm.reset();
 })
+
+
+fetch("http://localhost:3000")
+.then(res => res.json())
+.then(data => console.log(data))
 
 
 
@@ -71,8 +70,10 @@ function displayMeal(dataRecipes){
         //console.log(mealIngredient)
         let likes = 0;
         let displaydiv = document.createElement("div")
-        displaydiv.innerHTML = 
-        `<div class="mealItem">
+        displaydiv.classList.add("mealItem")
+        
+        displaydiv.innerHTML= 
+        `
         <img src="${mealImage}" alt="${mealName}" id="meal-img"/>
         <p class="paragraph">${mealName}</p>
         <p class="paragraph" id="area">Country: ${mealArea}</p>
@@ -114,7 +115,11 @@ function displayMeal(dataRecipes){
         <li>${mealMeasure9}</li>
         <li>${mealMeasure10}</li>
         </ol>
-        </div>`
+
+        <br>
+        <br>
+        <br>
+        `
 
         let headings= displaydiv.querySelectorAll(".h3instruction")
         //console.log(headings)
@@ -171,7 +176,7 @@ function myFunc() {
 // 
 
 const form1 = document.getElementById("form1")
-form1.addEventListener("click", (event)=>{
+form1.addEventListener("submit", (event)=>{
     const searchInput = document.getElementById("recipeSearch").value;
     event.preventDefault();
     console.log(searchInput);

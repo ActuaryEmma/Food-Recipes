@@ -1,172 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Food Recipes</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- add navigation bar ,logo and search button -->
     <div class="header">
-        <a href="#" id="logo">NYAKIO'S KITCHEN</a>
-        <nav id="navigationbar">
-            <a href="#page">Home</a>
-            <a href="#about-section">About</a>
-            <a href="#search-recipe">Search Recipes</a>
-            <a href="#contactForm">Feedback</a>
-            <a href="#contactinfo">Contact</a>
-        </nav>
-        <form id="form">
-            <input type="text" class="search-bar" placeholder="Let's cook" name=""/>
-            
-            <input type="submit" class="button" value="search"/>
-        </form>
+      <a href="#" id="logo">NYAKIO'S KITCHEN</a>
+      <nav id="navigationbar">
+        <a href="#frontPage">Home</a>
+        <a href="#about-section">About</a>
+        <a href="#search-recipe">Search Recipes</a>
+        <a href="#contactForm" class="feedback">Feedback  </a>
+        <a href="#contactinfo">Contact</a>
+      </nav>
+      <form id="form">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Let's cook"
+          name=""
+        />
+
+        <input type="submit" class="button" value="search" />
+      </form>
     </div>
 
-     <!-- Homepage : image and homepage headers -->
-     <section class="page" id="page">
-        <div class="card">
-            <div class="homepage">
-                <h2 id="paragraph">A recipe is a story <br> that ends with a good meal</h2>
-                <h3 id="homeh3">Want to learn cook but confused how to start? <br> No need to worry again </h3>
-                <a href="#form1" id="homebtn" class="homebtn">Get started</a>
-                    
-            </div>    
+    <!-- Homepage : image and homepage headers -->
+    <div id="main">
+      <div class="page" id="frontPage">
+          <div class="homepage">
+            <h2 id="paragraph">
+              A recipe is a story <br />
+              that ends with a good meal
+            </h2><br><br>
+            <h3 id="homeh3">
+              Want to learn cook but confused how to start? <br />
+              No need to worry again
+            </h3><br><br>
             
-        </div>
-        <div id="homeimage">
-            <img src="Images/home.jpg" alt="Home">
-        </div>
-    </section>
+            <a href="#form1" id="homebtn" class="homebtn">Get started</a>
+          </div>
+          <div id="homeimage">
+            <img src="Images/home.jpg" alt="Home" />
+          </div>
+      </div>
 
-     <!-- About page-->
-     <section class="about" id="about-section">
-
+      <!-- About page-->
+      <div class="about" id="about-section">
         <div class="about-img">
-            <!-- <img src="Images/home.jpg"> -->
+          <!-- <img src="Images/recipe.jpg"> -->
         </div>
         <div class="about-text">
-
-            <h2 id="abouth3">About Us</h2>
-            <h3 id="abouth2">We speak the good food language</h3>
-            <p id="aboutparagraph"> Nyakio is a food blogger dedicated to sharing recipes for everyday cooking as well as entertaiment.You’ll find over 3,000 of the very best, tried and true recipes with nutritional information, ratings and big, beautiful photographs. <br> Need dinner ideas for your busy family? Have you been assigned to bring dessert to a friend’s party? Are you planning a barbecue or a holiday menu? Then you’re in the right place! Delivering recipes that inspire novices and veterans alike and making cooking in the kitchen fun is what Nyakio's Kitchen is all about.</p>
-            
+          <h2 id="abouth2">About Us</h2>
+          <h3 id="abouth3">We speak the good food language</h3>
+          <p id="aboutparagraph">
+            Nyakio is a food blogger dedicated to sharing recipes for everyday
+            cooking as well as entertaiment.You’ll find over 3,000 of the very
+            best, tried and true recipes with nutritional information, ratings
+            and big, beautiful photographs. <br />
+            Need dinner ideas for your busy family? Have you been assigned to
+            bring dessert to a friend’s party? Are you planning a barbecue or a
+            holiday menu? Then you’re in the right place! Delivering recipes
+            that inspire novices and veterans alike and making cooking in the
+            kitchen fun is what Nyakio's Kitchen is all about.
+          </p>
         </div>
-    </section>
-
-    <!-- search recipe section -->    
-    <section >
-
+      </div>
+      <hr>
+      <!-- search recipe section -->
+      <div class="recipedetails">
         <div id="searchcolor">
-            
-            <form id="form1">
-                <input type="text" id="recipeSearch" class="search-bar" placeholder="Let's cook" name=""/>
-                <input type="submit" id ="searchInput" class="button" value="search"/>
-            </form>
-            <div class="searchResults" id="search-recipe">
-                <h3>Search Results:</h3>
-            </div> 
+          <form id="form1">
+            <input
+              type="text"
+              id="recipeSearch"
+              class="search-bar"
+              placeholder="Let's cook"
+              name=""
+            />
+            <input
+              type="submit"
+              id="searchInput"
+              class="button"
+              value="search"
+            />
+          </form>
+          <div class="searchResults" id="search-recipe">
+            <h4>Search Results:</h4>
+          </div>
         </div>
-        
-        
+
         <div class="meal-recipes" id="meal-recipes">
-             
-            <!-- <div class="recipe">
-                 <div class="meal-item">
-                    <div id="meal-img">
-                        <img src="Images/home.jpg" alt="food">
-                    </div>
-                    <div id="meal-name">
-                        <h3 id="name">Fish plate</h3>
-                        <a href="#" class="recipe-btn" >Get Recipe</a>
-                    </div>
-                </div> 
-            </div>  -->
+             <!-- meal items -->
         </div>
-        
-    </section>
-
-     
-            
-           
-        
-
+      </div>
+      <br>
+      <br>
+      <hr>
+      <div class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="border"></div>
+        <form class="contact-form" action="index.html" method="post">
+          <input type="text" class="contact-form-text" placeholder="Your name">
+          <input type="email" class="contact-form-text" placeholder="Your email">
+          <input type="text" class="contact-form-text" placeholder="Your Phone Number">
+          <select  class="contact-form-text"id="country" name="counties">
+            <option value="Kenya">Kirinyaga</option>
+            <option value="Nairobi">Nairobi</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Kisumu">Kisimu</option>
+            <option value="Muranga">Muranga</option>
+            <option value="Kiambu">Kiambu</option>
+            <option value="Embu">Embu</option>
+            <option value="Meru">Meru</option>
+            <option value="Nyeri">Nyeri</option>
+          </select>
+          <textarea class="contact-form-text" placeholder="Your message"></textarea>
+          <input type="submit" class="contact-form-btn" value="send">
+        </form>
+      </div>
     
 
-    <section>
-        <div class="contacts">
-            <h2>Contact Us</h2>
-        </div>
-        
-        
-        <div class="contactForm" id="contactForm">
-            <form class="feedbackinput">
-                <h2>Enter your full name</h2>
-                <div class ="inputBox">
-                    <input type="text" name=""required="required" placeholder="Full Name">
-            
-                <h2>Enter valid email address</h2>
-                <div class ="inputBox">
-                    <input type="text" name=""required="required" placeholder="Email">
-                  
-                </div>
-                <br>
-                <h2>Select county</h2>
-                <div>
-                    <label for="country">Country</label>
-                    <select id="country" name="counties">
-                        <option value="Kenya">Kirinyaga</option>
-                        <option value="Nairobi">Nairobi</option>
-                        <option value="Mombasa">Mombasa</option>
-                        <option value="Kisumu">Kisimu</option>
-                        <option value="Muranga">Muranga</option>
-                        <option value="Kiambu">Kiambu</option>
-                        <option value="Embu">Embu</option>
-                        <option value="Meru">Meru</option>
-                        <option value="Nyeri">Nyeri</option>
-                    </select>
-                </div>
-
-                <br>
-                <h2>Enter your message</h2>
-                <div class ="inputBox">
-                    <textarea required="required"></textarea> 
-                </div>
-
-                <div class ="inputBox">
-                    <input type="submit" name="" value="Send">
-                  
-                </div>
-            </form>
-        
-    </section>
-    <section>
-        <form id="contactinfo">
-            <div class="info"> 
-                    <div class="box">
-                         <div class="icon"></div> 
-                        <div class="text">
-                            <h3>Phone</h3>
-                            <p>+254 702 012191</p>
-                            <p>+254 702 012191</p>
-                        </div>
-        
-                        <div class="text">
-                            <h3>Email</h3>
-                            <hp>emmanyakio@gmail.com</hp><br>
-                            <hp>emmanyakio@gmail.com</hp>
-                        </div>
-                    </div>
-                </div>
-            </form>
-           
-        
-        </section> 
-        </form>
-    </div>
-    </section>
-</body>
-<script src="index.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
