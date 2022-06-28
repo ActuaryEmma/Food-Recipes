@@ -194,3 +194,12 @@ form1.addEventListener("submit", (event)=>{
      })
      form1.reset(); 
 }) 
+
+
+fetch("http://localhost:3000/contacts")
+.then(function(resp){
+    return resp.json();
+})
+.then(function(data){
+    console.log(data)
+})

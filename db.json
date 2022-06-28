@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "yourName": "Luca",
+      "email": "German Shepherd",
+      "phoneNumber": "0707",
+      "county": "Kirinyaga",
+      "message": "send",
+      "id": 1
+    },
+    {
+      "counties": "Nairobi",
+      "id": 2
+    },
+    {
+      "yourName": "emma",
+      "email": "emmanyakio@gmail.com",
+      "phoneNumber": "0702012191",
+      "counties": "Mombasa",
+      "message": "test",
+      "id": 3
+    }
+  ]
+}
