@@ -203,3 +203,6 @@ fetch("http://localhost:3000/contacts")
 .then(function(data){
     console.log(data)
 })
+.catch(error =>{
+    alert("Invalid input")
+})
